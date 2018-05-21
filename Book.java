@@ -1,5 +1,8 @@
 package com.app.model;
 
+@Entity
+@Table(name="Book")
+@EntityListeners(AuditingEntityListener.class)
 public class Book {
 private String bookName;
 private String bookAuthor;
