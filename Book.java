@@ -4,9 +4,21 @@ package com.app.model;
 @Table(name="Book")
 @EntityListeners(AuditingEntityListener.class)
 public class Book {
+
+@Id
+@Column(name="bookName")
 private String bookName;
+
+@Id
+@Column(name="bookAuthor")
 private String bookAuthor;
+
+@Id
+@Column(name="bookNumber")
 private long bookNumber;
+
+@Id
+@Column(name="bookPrice")
 private int bookPrice;
 public String getBookName() {
 	return bookName;
