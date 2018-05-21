@@ -3,13 +3,37 @@ package com.app.model;
 import java.sql.Timestamp;
 import java.util.List;
 
+@Entity 
+@Table(name="Borrower")
+@EntityListeners(AuditingEntityListener.class)
 public class Borrower {
+	
+@Id
+@Column(name="borrowerFname")
 private String borrowerFname;
+
+@Id
+@Column(name="borrowerLname")
 private String borrowerLname;
+
+@Id
+@Column(name="booksName")
 private List<String> booksName;
+		
+@Id
+@Column(name="issueDate")
 private Timestamp issueDate;
+		
+@Id
+@Column(name="returnDate")
 private Timestamp returnDate;
+
+@Id
+@Column(name="booknumber")
 private long booknumber;
+		
+@Id
+@Column(name="bookCount")
 private int bookCount;
 public String getBorrowerFname() {
 	return borrowerFname;
