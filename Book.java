@@ -5,11 +5,9 @@ package com.app.model;
 @EntityListeners(AuditingEntityListener.class)
 public class Book {
 
-@Id
 @Column(name="bookName")
 private String bookName;
 
-@Id
 @Column(name="bookAuthor")
 private String bookAuthor;
 
@@ -17,9 +15,9 @@ private String bookAuthor;
 @Column(name="bookNumber")
 private long bookNumber;
 
-@Id
 @Column(name="bookPrice")
 private int bookPrice;
+
 public String getBookName() {
 	return bookName;
 }
